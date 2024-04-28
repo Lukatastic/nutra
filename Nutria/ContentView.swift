@@ -256,7 +256,10 @@ struct ContentView: View {
                                 else{
                                     let sys = Python.import("sys")
                                     // FIX DIR BELOW TO FILE LOCATION PATH
-                                    sys.path.append(###DIR###)
+                                    let fileurl: URL = URL(fileURLWithPath: #file)
+                                    let folder = fileurl.deletingLastPathComponent()
+                                    folder += "yieldPred.py"
+                                    sys.path.append(folder)
                                     let ml_nutra = Python.import("yieldPred")
                                     var cropName
                                     if (maizeSaved == true) {
