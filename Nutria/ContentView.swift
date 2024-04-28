@@ -5,7 +5,7 @@
 //  Created by Jones Mays II on 4/27/24.
 //
 
-import SwiftUI
+import SwiftUI, PythonKit
 
 struct ContentView: View {
     
@@ -254,6 +254,24 @@ struct ContentView: View {
                                     }
                                 }
                                 else{
+                                    let sys = Python.import("sys")
+                                    // FIX DIR BELOW TO FILE LOCATION PATH
+                                    sys.path.append(###DIR###)
+                                    let ml_nutra = Python.import("yieldPred")
+                                    var cropName
+                                    if (maizeSaved == true) {
+                                        cropName = "Maize"
+                                    } else if (riceSaved == true) {
+                                        cropName = "Rice, paddy"
+                                    } else if (wheatSaved == true) {
+                                        cropName = "Wheat"
+                                    } else if (potatoesSaved == true) {
+                                        cropName = "Potatoes"
+                                    }
+                                    //LAST VAR OF INT IS AVG TEMP (SET TO 72)
+                                    let result = yieldPred.predict_pest([userDataService.cropYield, userDataService.farmSize, cropName, "72"])
+                                    predictedPesticides = String(result)!
+                                    //CHANGE PREDICTED PESTICIDES
                                     withAnimation(){
                                         userDataService.isContentViewOpen = false
                                     }
