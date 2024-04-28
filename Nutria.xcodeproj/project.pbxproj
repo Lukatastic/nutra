@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3496F56E2BDE297900229609 /* userData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496F56D2BDE297900229609 /* userData.swift */; };
+		3496F5702BDE2AD500229609 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496F56F2BDE2AD500229609 /* TabView.swift */; };
+		3496F5732BDE2BD300229609 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496F5722BDE2BD300229609 /* HomeView.swift */; };
+		3496F5752BDE2BE100229609 /* SuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496F5742BDE2BE100229609 /* SuggestionsView.swift */; };
+		3496F5772BDE2BEF00229609 /* SettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496F5762BDE2BEF00229609 /* SettingsViews.swift */; };
+		34CC88532BDDE3FE003293A0 /* NutriaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC88522BDDE3FE003293A0 /* NutriaApp.swift */; };
+		34CC88552BDDE3FE003293A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC88542BDDE3FE003293A0 /* ContentView.swift */; };
+		34CC88572BDDE3FF003293A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34CC88562BDDE3FF003293A0 /* Assets.xcassets */; };
+		34CC885A2BDDE3FF003293A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34CC88592BDDE3FF003293A0 /* Preview Assets.xcassets */; };
+		34CC88642BDDE400003293A0 /* NutriaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC88632BDDE400003293A0 /* NutriaTests.swift */; };
+		34CC886E2BDDE400003293A0 /* NutriaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC886D2BDDE400003293A0 /* NutriaUITests.swift */; };
+		34CC88702BDDE400003293A0 /* NutriaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC886F2BDDE400003293A0 /* NutriaUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34CC88602BDDE400003293A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34CC88472BDDE3FE003293A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34CC884E2BDDE3FE003293A0;
+			remoteInfo = Nutria;
+		};
+		34CC886A2BDDE400003293A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34CC88472BDDE3FE003293A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34CC884E2BDDE3FE003293A0;
+			remoteInfo = Nutria;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3496F56D2BDE297900229609 /* userData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userData.swift; sourceTree = "<group>"; };
+		3496F56F2BDE2AD500229609 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		3496F5722BDE2BD300229609 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3496F5742BDE2BE100229609 /* SuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsView.swift; sourceTree = "<group>"; };
+		3496F5762BDE2BEF00229609 /* SettingsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViews.swift; sourceTree = "<group>"; };
+		34CC884F2BDDE3FE003293A0 /* Nutria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nutria.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		34CC88522BDDE3FE003293A0 /* NutriaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriaApp.swift; sourceTree = "<group>"; };
+		34CC88542BDDE3FE003293A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		34CC88562BDDE3FF003293A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		34CC88592BDDE3FF003293A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		34CC885F2BDDE400003293A0 /* NutriaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34CC88632BDDE400003293A0 /* NutriaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriaTests.swift; sourceTree = "<group>"; };
+		34CC88692BDDE400003293A0 /* NutriaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34CC886D2BDDE400003293A0 /* NutriaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriaUITests.swift; sourceTree = "<group>"; };
+		34CC886F2BDDE400003293A0 /* NutriaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34CC884C2BDDE3FE003293A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34CC885C2BDDE400003293A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34CC88662BDDE400003293A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3496F5712BDE2BC500229609 /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				3496F56F2BDE2AD500229609 /* TabView.swift */,
+				3496F5722BDE2BD300229609 /* HomeView.swift */,
+				3496F5742BDE2BE100229609 /* SuggestionsView.swift */,
+				3496F5762BDE2BEF00229609 /* SettingsViews.swift */,
+			);
+			path = TabViews;
+			sourceTree = "<group>";
+		};
+		34CC88462BDDE3FE003293A0 = {
+			isa = PBXGroup;
+			children = (
+				34CC88512BDDE3FE003293A0 /* Nutria */,
+				34CC88622BDDE400003293A0 /* NutriaTests */,
+				34CC886C2BDDE400003293A0 /* NutriaUITests */,
+				34CC88502BDDE3FE003293A0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		34CC88502BDDE3FE003293A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34CC884F2BDDE3FE003293A0 /* Nutria.app */,
+				34CC885F2BDDE400003293A0 /* NutriaTests.xctest */,
+				34CC88692BDDE400003293A0 /* NutriaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34CC88512BDDE3FE003293A0 /* Nutria */ = {
+			isa = PBXGroup;
+			children = (
+				34CC88522BDDE3FE003293A0 /* NutriaApp.swift */,
+				34CC88542BDDE3FE003293A0 /* ContentView.swift */,
+				3496F5712BDE2BC500229609 /* TabViews */,
+				3496F56D2BDE297900229609 /* userData.swift */,
+				34CC88562BDDE3FF003293A0 /* Assets.xcassets */,
+				34CC88582BDDE3FF003293A0 /* Preview Content */,
+			);
+			path = Nutria;
+			sourceTree = "<group>";
+		};
+		34CC88582BDDE3FF003293A0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				34CC88592BDDE3FF003293A0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		34CC88622BDDE400003293A0 /* NutriaTests */ = {
+			isa = PBXGroup;
+			children = (
+				34CC88632BDDE400003293A0 /* NutriaTests.swift */,
+			);
+			path = NutriaTests;
+			sourceTree = "<group>";
+		};
+		34CC886C2BDDE400003293A0 /* NutriaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				34CC886D2BDDE400003293A0 /* NutriaUITests.swift */,
+				34CC886F2BDDE400003293A0 /* NutriaUITestsLaunchTests.swift */,
+			);
+			path = NutriaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		34CC884E2BDDE3FE003293A0 /* Nutria */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34CC88732BDDE400003293A0 /* Build configuration list for PBXNativeTarget "Nutria" */;
+			buildPhases = (
+				34CC884B2BDDE3FE003293A0 /* Sources */,
+				34CC884C2BDDE3FE003293A0 /* Frameworks */,
+				34CC884D2BDDE3FE003293A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nutria;
+			productName = Nutria;
+			productReference = 34CC884F2BDDE3FE003293A0 /* Nutria.app */;
+			productType = "com.apple.product-type.application";
+		};
+		34CC885E2BDDE400003293A0 /* NutriaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34CC88762BDDE400003293A0 /* Build configuration list for PBXNativeTarget "NutriaTests" */;
+			buildPhases = (
+				34CC885B2BDDE400003293A0 /* Sources */,
+				34CC885C2BDDE400003293A0 /* Frameworks */,
+				34CC885D2BDDE400003293A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34CC88612BDDE400003293A0 /* PBXTargetDependency */,
+			);
+			name = NutriaTests;
+			productName = NutriaTests;
+			productReference = 34CC885F2BDDE400003293A0 /* NutriaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		34CC88682BDDE400003293A0 /* NutriaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34CC88792BDDE400003293A0 /* Build configuration list for PBXNativeTarget "NutriaUITests" */;
+			buildPhases = (
+				34CC88652BDDE400003293A0 /* Sources */,
+				34CC88662BDDE400003293A0 /* Frameworks */,
+				34CC88672BDDE400003293A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34CC886B2BDDE400003293A0 /* PBXTargetDependency */,
+			);
+			name = NutriaUITests;
+			productName = NutriaUITests;
+			productReference = 34CC88692BDDE400003293A0 /* NutriaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34CC88472BDDE3FE003293A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					34CC884E2BDDE3FE003293A0 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					34CC885E2BDDE400003293A0 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 34CC884E2BDDE3FE003293A0;
+					};
+					34CC88682BDDE400003293A0 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 34CC884E2BDDE3FE003293A0;
+					};
+				};
+			};
+			buildConfigurationList = 34CC884A2BDDE3FE003293A0 /* Build configuration list for PBXProject "Nutria" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 34CC88462BDDE3FE003293A0;
+			productRefGroup = 34CC88502BDDE3FE003293A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34CC884E2BDDE3FE003293A0 /* Nutria */,
+				34CC885E2BDDE400003293A0 /* NutriaTests */,
+				34CC88682BDDE400003293A0 /* NutriaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		34CC884D2BDDE3FE003293A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34CC885A2BDDE3FF003293A0 /* Preview Assets.xcassets in Resources */,
+				34CC88572BDDE3FF003293A0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34CC885D2BDDE400003293A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34CC88672BDDE400003293A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34CC884B2BDDE3FE003293A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3496F5752BDE2BE100229609 /* SuggestionsView.swift in Sources */,
+				34CC88552BDDE3FE003293A0 /* ContentView.swift in Sources */,
+				34CC88532BDDE3FE003293A0 /* NutriaApp.swift in Sources */,
+				3496F5702BDE2AD500229609 /* TabView.swift in Sources */,
+				3496F5732BDE2BD300229609 /* HomeView.swift in Sources */,
+				3496F56E2BDE297900229609 /* userData.swift in Sources */,
+				3496F5772BDE2BEF00229609 /* SettingsViews.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34CC885B2BDDE400003293A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34CC88642BDDE400003293A0 /* NutriaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34CC88652BDDE400003293A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34CC886E2BDDE400003293A0 /* NutriaUITests.swift in Sources */,
+				34CC88702BDDE400003293A0 /* NutriaUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		34CC88612BDDE400003293A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34CC884E2BDDE3FE003293A0 /* Nutria */;
+			targetProxy = 34CC88602BDDE400003293A0 /* PBXContainerItemProxy */;
+		};
+		34CC886B2BDDE400003293A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34CC884E2BDDE3FE003293A0 /* Nutria */;
+			targetProxy = 34CC886A2BDDE400003293A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		34CC88712BDDE400003293A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		34CC88722BDDE400003293A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		34CC88742BDDE400003293A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Nutria/Preview Content\"";
+				DEVELOPMENT_TEAM = 5R746C49M8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JonesMays.Nutria;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		34CC88752BDDE400003293A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Nutria/Preview Content\"";
+				DEVELOPMENT_TEAM = 5R746C49M8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JonesMays.Nutria;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		34CC88772BDDE400003293A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5R746C49M8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JonesMays.NutriaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nutria.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Nutria";
+			};
+			name = Debug;
+		};
+		34CC88782BDDE400003293A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5R746C49M8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JonesMays.NutriaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nutria.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Nutria";
+			};
+			name = Release;
+		};
+		34CC887A2BDDE400003293A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5R746C49M8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JonesMays.NutriaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nutria;
+			};
+			name = Debug;
+		};
+		34CC887B2BDDE400003293A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5R746C49M8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JonesMays.NutriaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nutria;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34CC884A2BDDE3FE003293A0 /* Build configuration list for PBXProject "Nutria" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34CC88712BDDE400003293A0 /* Debug */,
+				34CC88722BDDE400003293A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34CC88732BDDE400003293A0 /* Build configuration list for PBXNativeTarget "Nutria" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34CC88742BDDE400003293A0 /* Debug */,
+				34CC88752BDDE400003293A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34CC88762BDDE400003293A0 /* Build configuration list for PBXNativeTarget "NutriaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34CC88772BDDE400003293A0 /* Debug */,
+				34CC88782BDDE400003293A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34CC88792BDDE400003293A0 /* Build configuration list for PBXNativeTarget "NutriaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34CC887A2BDDE400003293A0 /* Debug */,
+				34CC887B2BDDE400003293A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 34CC88472BDDE3FE003293A0 /* Project object */;
+}
