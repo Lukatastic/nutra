@@ -15,6 +15,7 @@ struct SettingsView: View {
     
     @State private var profileItem: PhotosPickerItem?
     @State private var numberString = ""
+    @State private var cropYieldString = ""
     
     var body: some View {
       
@@ -55,9 +56,9 @@ struct SettingsView: View {
                                 ZStack(){
                                     
                                     Circle()
-                                        .stroke(lineWidth: 8)  // Adjust the thickness of the ring
+                                        .stroke(lineWidth: 5)  // Adjust the thickness of the ring
                                         .foregroundColor(Color.darkGreen)  // Set the color of the ring
-                                        .frame(width: UIScreen.screenWidth/2.50, height: UIScreen.screenWidth/2.50)
+                                        .frame(width: UIScreen.screenWidth/2.30, height: UIScreen.screenWidth/2.30)
                                     
                                     userDataService.profileImage
                                         .resizable()
@@ -90,20 +91,18 @@ struct SettingsView: View {
                                     
                                 }
                                 
-                                Text("Charles Darwin")
+                                Text(userDataService.name)
                                     .font(.system(size: UIScreen.screenWidth/20, weight: .regular, design: .default))
                                     .padding(.top)
                                 
                             }
                         }
                         .padding(.top)
-                        .shadow(radius: 5)
                     
                     Rectangle()
                         .fill(Color.white)
                         .frame(width: UIScreen.screenWidth/1.25, height: UIScreen.screenWidth/7.5)
                         .cornerRadius(15)
-                        .shadow(radius: 5)
                         .overlay(){
                             
                             HStack(){
@@ -120,7 +119,6 @@ struct SettingsView: View {
                         .fill(Color.white)
                         .frame(width: UIScreen.screenWidth/1.25, height: UIScreen.screenWidth/7.5)
                         .cornerRadius(15)
-                        .shadow(radius: 5)
                         .overlay(){
                             
                             HStack(){
@@ -129,11 +127,11 @@ struct SettingsView: View {
                                     .font(.system(size: UIScreen.screenWidth/20, weight: .regular, design: .default))
                                     .lineLimit(1)
                                 
-                                TextField(" 100", text: $numberString)
+                                TextField(" 100", text: $userDataService.farmSize)
                                             .keyboardType(.decimalPad)
                                             .onChange(of: userDataService.farmSize) { newValue in
                                                 // Filter the input to allow only numbers
-                                                numberString = newValue.filter { "0123456789".contains($0) }
+                                                userDataService.farmSize = userDataService.farmSize.filter { "0123456789".contains($0) }
                                             }
                             }
                             .padding(.horizontal)
@@ -141,9 +139,30 @@ struct SettingsView: View {
                     
                     Rectangle()
                         .fill(Color.white)
-                        .frame(width: UIScreen.screenWidth/1.25,  height: UIScreen.screenHeight/4)
+                        .frame(width: UIScreen.screenWidth/1.25, height: UIScreen.screenWidth/7.5)
                         .cornerRadius(15)
-                        .shadow(radius: 5)
+                        .overlay(){
+                            
+                            HStack(){
+                                
+                                Text("Target Crop Yield:")
+                                    .font(.system(size: UIScreen.screenWidth/20, weight: .regular, design: .default))
+                                    .lineLimit(1)
+                                
+                                TextField(" 100", text: $userDataService.cropYield)
+                                            .keyboardType(.decimalPad)
+                                            .onChange(of: userDataService.cropYield) { newValue in
+                                                // Filter the input to allow only numbers
+                                                userDataService.cropYield =  userDataService.cropYield.filter { "0123456789".contains($0) }
+                                            }
+                            }
+                            .padding(.horizontal)
+                        }
+                                    
+                    Rectangle()
+                        .fill(Color.white)
+                        .frame(width: UIScreen.screenWidth/1.25,  height: UIScreen.screenHeight/5)
+                        .cornerRadius(15)
                         .overlay(){
                             
                             HStack(){
@@ -161,17 +180,32 @@ struct SettingsView: View {
                                     preferencesView(savedButtonPressed: $userDataService.wheatSaved, name: "Wheat")
                                     preferencesView(savedButtonPressed: $userDataService.potatoesSaved, name: "Potatoes")
                                 }
-                                .padding(.vertical)
+                    
                             }
                             .padding(.horizontal)
                         }
+                    
+                    Button{
+                        
+                    }
+                    label:{
+                    
+                        Text("Update Predictions")
+                            .font(.system(size: UIScreen.screenWidth/25, weight: .medium, design: .default))
+                            .padding(.vertical)
+                            .padding(.horizontal)
+                            .foregroundColor(Color.white)
+                            .background(Color.darkGreen)
+                            .cornerRadius(25)
+                    }
+                    
                     
                     Spacer()
                     
                 }
                 
             }
-            .frame(width: UIScreen.screenWidth)
+           
         }
         .onChange(of: profileItem) { newValue in
             Task {
@@ -221,7 +255,7 @@ struct preferencesView: View {
         label:{
             
             Text(name)
-                .frame(width: UIScreen.screenHeight/7.5, height: UIScreen.screenWidth/10)
+                .frame(width: UIScreen.screenHeight/7.5, height: UIScreen.screenWidth/15)
                 .foregroundColor(savedForegroundColor)
                 .background(savedBackgroundColor)
                 .cornerRadius(25)

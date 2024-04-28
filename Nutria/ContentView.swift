@@ -10,10 +10,9 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var animateGradient: Bool = false
-    @State private var questionText: String = "What is your farm size?"
+    @State private var questionText: String = "What is your name?"
     @State private var farmSize: Double = 0
     @State private var tapCount: Int = 0
-    @State private var location: String = ""
     
     @State private var potatoesForegroundColor = Color.darkGreen
     @State private var maizeForegroundColor = Color.darkGreen
@@ -26,12 +25,6 @@ struct ContentView: View {
     @State private var wheatBackgroundColor = Color.white
     @State private var riceBackgroundColor = Color.white
     @State private var soybeanBackgroundColor = Color.white
-    
-    @State private var maizeButtonPressed = false
-    @State private var wheatButtonPressed = false
-    @State private var riceButtonPressed = false
-    @State private var soybeanButtonPressed = false
-    @State private var potatoesButtonPressed = false
     
     @StateObject public var userDataService: UserDataService
 
@@ -77,13 +70,33 @@ struct ContentView: View {
                             
                             if (self.tapCount == 0){
                                 
+                                TextField("Charles Darwin", text: $userDataService.name)
+                                    .frame(width: UIScreen.screenWidth/1.50, height: UIScreen.screenWidth/11)
+                                    .multilineTextAlignment(.center)
+                                    .background(Color.lightGray)
+                                    .cornerRadius(25)
+                            }
+                            if (self.tapCount == 1){
+                                
+                                TextField("100", text: $userDataService.cropYield)
+                                    .frame(width: UIScreen.screenWidth/1.50, height: UIScreen.screenWidth/11)
+                                    .multilineTextAlignment(.center)
+                                    .background(Color.lightGray)
+                                    .cornerRadius(25)
+                            }
+                            else if (self.tapCount == 2){
+                                
                                 Slider(value: $farmSize, in: 0...1000, step: 5)
                                     .frame(width: UIScreen.screenWidth/1.50)
+                                    .onChange(of: farmSize) { newValue in
+                                        // Filter the input to allow only numbers
+                                        userDataService.farmSize = String(farmSize)
+                                    }
                                 
                                 Text(String(farmSize) + " acres")
     
                             }
-                            else if (self.tapCount == 1){
+                            else if (self.tapCount == 3){
                                 
                                 HStack(){
                                     
@@ -91,19 +104,21 @@ struct ContentView: View {
                                         
                                         Button{
                                             
-                                            if (!maizeButtonPressed){
+                                            if (!userDataService.maizeSaved){
                                                 withAnimation(){
                                                     maizeForegroundColor = Color.white
                                                     maizeBackgroundColor = Color.lightGreen
                                                 }
-                                                maizeButtonPressed = true
+                                                userDataService.maizeSaved = true
+                                                userDataService.maizeSaved = true
                                             }
                                             else {
                                                 withAnimation(){
                                                     maizeForegroundColor = Color.lightGreen
                                                     maizeBackgroundColor = Color.white
                                                 }
-                                                maizeButtonPressed = false
+                                                userDataService.maizeSaved = false
+                                            
                                             }
                                         }
                                         label:{
@@ -123,14 +138,14 @@ struct ContentView: View {
                                         
                                         Button(action: {
                                                       withAnimation {
-                                                          if !wheatButtonPressed {
+                                                          if !userDataService.wheatSaved {
                                                               wheatForegroundColor = .white
                                                               wheatBackgroundColor = .lightGreen
                                                           } else {
                                                               wheatForegroundColor = .lightGreen
                                                               wheatBackgroundColor = .white
                                                           }
-                                                          wheatButtonPressed.toggle()
+                                                          userDataService.wheatSaved.toggle()
                                                       }
                                                   }) {
                                                       Text("Wheat")
@@ -153,14 +168,15 @@ struct ContentView: View {
                                         
                                         Button(action: {
                                                       withAnimation {
-                                                          if !potatoesButtonPressed {
+                                                          if !userDataService.potatoesSaved {
                                                               potatoesForegroundColor = .white
                                                               potatoesBackgroundColor = .lightGreen
                                                           } else {
                                                               potatoesForegroundColor = .lightGreen
                                                               potatoesBackgroundColor = .white
                                                           }
-                                                          potatoesButtonPressed.toggle()
+                                                          userDataService.potatoesSaved.toggle()
+                                                
                                                       }
                                                   }) {
                                                       Text("Potatoes")
@@ -177,15 +193,15 @@ struct ContentView: View {
                                         
                                         Button(action: {
                                                       withAnimation {
-                                                          if !riceButtonPressed {
+                                                          if !userDataService.riceSaved {
                                                               riceForegroundColor = .white
                                                               riceBackgroundColor = .lightGreen
                                                           } else {
                                                               riceForegroundColor = .lightGreen
                                                               riceBackgroundColor = .white
                                                           }
-                                                          riceButtonPressed.toggle()
-                                                      }
+                                                          userDataService.riceSaved.toggle()
+                                                                                            }
                                                   }) {
                                                       Text("Rice")
                                                           .frame(width: UIScreen.main.bounds.height/7.5, height: UIScreen.main.bounds.width/10)
@@ -203,9 +219,9 @@ struct ContentView: View {
                                 }
                             
                             }
-                            else if (self.tapCount == 2){
+                            else if (self.tapCount == 4){
                                
-                                TextField("Country", text: $location)
+                                TextField("Country", text: $userDataService.location)
                                     .frame(width: UIScreen.screenWidth/1.50, height: UIScreen.screenWidth/11)
                                     .multilineTextAlignment(.center)
                                     .background(Color.lightGray)
@@ -216,19 +232,28 @@ struct ContentView: View {
                             Spacer()
                             
                             Button(){
-                            
+                                
                                 if (self.tapCount == 0){
+                                    withAnimation(){
+                                        questionText = "What is your yearly crop yield"
+                                    }
+                                }
+                                else if (self.tapCount == 1){
+                                    withAnimation(){
+                                        questionText = "What is your farm size?"
+                                    }
+                                }
+                                else if (self.tapCount == 2){
                                     withAnimation(){
                                         questionText = "Select which crops you grow?"
                                     }
                                 }
-                                else if (self.tapCount == 1){
+                                else if (self.tapCount == 3){
                                     withAnimation(){
                                         questionText = "Where is your farm located by country?"
                                     }
                                 }
                                 else{
-                                    
                                     withAnimation(){
                                         userDataService.isContentViewOpen = false
                                     }
@@ -264,6 +289,7 @@ extension Color {
     static let BackgroundWhite = Color(red: 242/255, green: 242/255, blue: 242/255)
     static let lightGray = Color(red: 211/255, green: 211/255, blue: 211/255)
     static let extraLightGray = Color(red: 230/255, green: 230/255, blue: 230/255)
+    static let pasteRed = Color(red: 255/255, green: 87/255, blue: 51/255)
     
 }
 

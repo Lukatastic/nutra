@@ -21,7 +21,7 @@ struct NutriaApp: App {
                 TabViewManager(userDataService: userDataService)
                
                 if (userDataService.isContentViewOpen){
-                    //ContentView(userDataService: userDataService)
+                    ContentView(userDataService: userDataService)
                 }
             }
             

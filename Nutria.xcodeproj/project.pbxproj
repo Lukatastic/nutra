@@ -12,6 +12,7 @@
 		3496F5732BDE2BD300229609 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496F5722BDE2BD300229609 /* HomeView.swift */; };
 		3496F5752BDE2BE100229609 /* SuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496F5742BDE2BE100229609 /* SuggestionsView.swift */; };
 		3496F5772BDE2BEF00229609 /* SettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496F5762BDE2BEF00229609 /* SettingsViews.swift */; };
+		3496F57B2BDE67B500229609 /* YieldChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496F57A2BDE67B500229609 /* YieldChartView.swift */; };
 		34CC88532BDDE3FE003293A0 /* NutriaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC88522BDDE3FE003293A0 /* NutriaApp.swift */; };
 		34CC88552BDDE3FE003293A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC88542BDDE3FE003293A0 /* ContentView.swift */; };
 		34CC88572BDDE3FF003293A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34CC88562BDDE3FF003293A0 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		3496F5722BDE2BD300229609 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3496F5742BDE2BE100229609 /* SuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsView.swift; sourceTree = "<group>"; };
 		3496F5762BDE2BEF00229609 /* SettingsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViews.swift; sourceTree = "<group>"; };
+		3496F57A2BDE67B500229609 /* YieldChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YieldChartView.swift; sourceTree = "<group>"; };
 		34CC884F2BDDE3FE003293A0 /* Nutria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nutria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34CC88522BDDE3FE003293A0 /* NutriaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriaApp.swift; sourceTree = "<group>"; };
 		34CC88542BDDE3FE003293A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				3496F56F2BDE2AD500229609 /* TabView.swift */,
 				3496F5722BDE2BD300229609 /* HomeView.swift */,
+				3496F57A2BDE67B500229609 /* YieldChartView.swift */,
 				3496F5742BDE2BE100229609 /* SuggestionsView.swift */,
 				3496F5762BDE2BEF00229609 /* SettingsViews.swift */,
 			);
@@ -283,6 +286,7 @@
 				3496F5752BDE2BE100229609 /* SuggestionsView.swift in Sources */,
 				34CC88552BDDE3FE003293A0 /* ContentView.swift in Sources */,
 				34CC88532BDDE3FE003293A0 /* NutriaApp.swift in Sources */,
+				3496F57B2BDE67B500229609 /* YieldChartView.swift in Sources */,
 				3496F5702BDE2AD500229609 /* TabView.swift in Sources */,
 				3496F5732BDE2BD300229609 /* HomeView.swift in Sources */,
 				3496F56E2BDE297900229609 /* userData.swift in Sources */,
